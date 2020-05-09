@@ -7,7 +7,7 @@ const deploy = async (dir,repoName,branch) => {
     await pull(branch);
 }
 
-module.exports = {deploy}
+module.exports = { deploy };
 
 //const isCLI = ! module.parent;
 // if (isCLI) {
