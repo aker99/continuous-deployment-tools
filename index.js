@@ -2,11 +2,16 @@ const express = require('express');
 const app = express();
 const port  = 8050;
 
+const cors = require('cors')
+
+
+app.use(cors())
+
 app.get('', (req,res) => {
     res.send('Hello, It\'s a deployment module');
 });
 
-app.post('aker99/frontend', (req,res) => {
+app.post('/aker99/frontend', (req,res) => {
     console.log('req:',req);
     res.send('Done');
 });
