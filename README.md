@@ -1,2 +1,2 @@
-# Github Web Hooks Handler 
-A express based server to automate deployment process via Github Web Hooks
+# Continuous Deployment Tool
+A light weight CD Tool deployed on top of ExpressJS currently supports github webhooks
