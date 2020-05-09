@@ -13,7 +13,7 @@ app.use(bodyparser.urlencoded({
     extended: true
 }));
 
-app.post('ghwebhooks', (req,res) => {
+app.post('/ghwebhooks', (req,res) => {
     
     const payload = req.body.payload;
     const branch = payload.ref.split('/').pop();
