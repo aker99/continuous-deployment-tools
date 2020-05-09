@@ -20,7 +20,7 @@ app.post('/ghwebhooks', (req,res) => {
     const repoName = payload.repository.full_name;
 
     if (records[repoName].branch === branch) {
-        const { deploy } = require(records[repoName].script);
+        const { deploy } = require(`./assets/scripts/${records[repoName].script}`);
         deploy(records[repoName].dir,repoName,branch);
         return res.send('Git pull started. Please go through look services logs for more detail');
     } else {
